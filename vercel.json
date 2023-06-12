@@ -1,0 +1,11 @@
+{
+    "builds": [{
+        "src": "exp1/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+    }],
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "exp1/wsgi.py"
+    }]
+}
